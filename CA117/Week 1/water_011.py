@@ -1,21 +1,16 @@
 #!/usr/bin/env python3
 
 import sys
-f = True
+numbers = sys.stdin.readlines()
 buckets = 0
 
-for numbers in sys.stdin:
-   if f:
-      numbers = numbers.split()
-      liters = int(numbers[0].strip())
-      f = False
+litersAvailable = int(numbers[0].strip())
+capacity = numbers[1].strip().split()
+
+for liter in capacity:
+   if litersAvailable >= int(liter):
+      litersAvailable -= int(liter)
+      buckets += 1
    else:
-      listofLiters = numbers.split()
-      buckets = 0
-      for liter in listofLiters:
-         if liters >= int(liter):
-            liters = liters - int(liter)
-            buckets += 1
-         elif liters < int(liter):
-              break
-      print(buckets)
+      break
+print(buckets)
