@@ -1,2 +1,2 @@
-Each file contains the DCU CA code to each module, the task solutions for each week.
+Each file contains the DCU CA code to each module, the task solutions for each week along with Project Euler solutions.
 
