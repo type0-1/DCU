@@ -1,2 +1,3 @@
-# DCU
-A repository of code made for DCU tasks.
+# DCU:
+
+CA116, CA117 and Project Euler tasks that have been completed.
