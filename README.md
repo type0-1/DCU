@@ -1,2 +1,4 @@
-Each folder contains the DCU CA code for each module, the task solutions for each week.
+Each folder is represented by the CA code for each programming module.
+
+In each folder, you can find completed solutions corresponding to the week released.
 
