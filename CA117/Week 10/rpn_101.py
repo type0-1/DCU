@@ -32,4 +32,4 @@ def calculator(line):
 	       elif char == "r":
 	          num1 = sqrt(num1)
 	          nums.append(num1)
-    return nums.pop()
+    return nums[0]
