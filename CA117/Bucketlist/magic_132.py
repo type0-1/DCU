@@ -1,20 +1,29 @@
 import sys
 
-input = sys.stdin.readlines()
-num = int(input[0].strip())
+class Magic(object):
+    
+    def __init__(self, magic, numbers=None):
+        self.magic = magic
+        self.numbers = numbers
+        
+        if self.numbers is None:
+            self.numbers = []
+    
+    def find_magic(self):
+        while self.magic:
+            self.magic -= 1
+            self.numbers.append("3") if self.magic % 2 == 0 else self.numbers.append("9")
+            self.magic //= 2
+        return self.numbers
+    
+    def __str__(self):
+        self.numbers = Magic(self.magic).find_magic()
+        return "".join(self.numbers)[::-1]
+            
+def main():
+    number = int(sys.stdin.readline().strip())
+    instance = Magic(number)
+    print(instance)
 
-values = ["3", "9"]
-nums = []
-final = []
-pos = 0
-count = 0
-
-for i in range(1500):
-	if i % 3 == 0:
-		if str(i)[0] in values and str(i)[-1] in values and count != num + 5:
-				nums.append(i)
-				count += 1
-for n in nums:
-	if str(n)[len(str(n)) // 2] in values:
-		final.append(n)
-print(final[num - 1])
+if __name__ == "__main__":
+    main()
