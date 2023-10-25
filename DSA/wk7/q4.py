@@ -4,23 +4,23 @@ class Node:
         self.data = data
         self.next = None
 
-def assign():
-    tmp = head
-    for i in range(1, 10):
-        current = Node(i)
-        tmp.next = current
-        tmp = current
 
+head = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+n4 = Node(4)
 
+head.next = n2
+n2.next = n3 
+n3.next = n4
 
 tmp = head
 
-while tmp != None:
-    tmp2 = tmp.data
-    tmp.data = tmp.next.data
-    tmp.next.data = tmp2
-    tmp = tmp.next.next
+while tmp.next != None:
+    tmp.next.next = tmp
+    tmp = tmp.next
 
-while head != None:
+while head.next != None:
     print(head.data)
-    head =  head.next
+    head = head.next
+print(head.data) 
