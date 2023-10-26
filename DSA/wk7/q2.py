@@ -4,7 +4,7 @@ class Node:
         self.next = None
     
     def find(self, data):
-        while self.next != None:
+        while self != None:
             if self.data == data:
                 return self.data
             self = self.next

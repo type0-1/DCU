@@ -5,6 +5,17 @@ class Node:
         self.next = None
 
 
+def swap_pairs(head):
+
+    new_head = head.next
+    tmp = head
+
+   
+
+
+	
+    return new_head
+
 head = Node(1)
 n2 = Node(2)
 n3 = Node(3)
@@ -14,13 +25,8 @@ head.next = n2
 n2.next = n3 
 n3.next = n4
 
-tmp = head
+head = swap_pairs(head)
 
-while tmp.next != None:
-    tmp.next.next = tmp
-    tmp = tmp.next
-
-while head.next != None:
+while head:
     print(head.data)
     head = head.next
-print(head.data) 
