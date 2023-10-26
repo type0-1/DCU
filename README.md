@@ -1,4 +1,4 @@
 Each folder is represented by the CA code for each programming module.
 
-In each folder, you can find completed solutions corresponding to the week released along with exam solutions and assignment solutions.
+These are programming problems that have completed solutions done by me, unless mentioned in the code that a part of code was referred to.
 
