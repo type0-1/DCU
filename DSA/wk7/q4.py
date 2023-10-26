@@ -52,7 +52,8 @@ n2.next = n3
 n3.next = n4
 
 head = swap_pairs(head)
+tmp = head
 
-while head:
-    print(head.data)
-    head = head.next
+while tmp:
+    print(tmp.data)
+    tmp = tmp.next

@@ -32,7 +32,6 @@ n2 = Node(2)
 n3 = Node(3)
 n4 = Node(4)
 n5 = Node(5)
-n6 = Node(6)
 
 # Connect Nodes
 
@@ -40,11 +39,10 @@ head.next = n2
 n2.next = n3
 n3.next = n4
 n4.next = n5
-n5.next = n6
 
 # Call function
 
-head = remove(head, 6)
+head = remove(head, 3)
 
 # Print result
 
