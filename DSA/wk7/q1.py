@@ -1,3 +1,8 @@
+"""
+Author: Samson Oloruntola
+Question: Assign Nodes in two's from 0-100 to Linked List.
+"""
+
 class Node:
     def __init__(self, data):
         self.data = data

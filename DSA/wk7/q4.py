@@ -1,3 +1,8 @@
+"""
+Author: Samson Oloruntola
+Question: Swap Adjacent Nodes.
+"""
+
 class Node:
 
     def __init__(self, data):

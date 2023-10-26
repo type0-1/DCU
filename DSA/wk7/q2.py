@@ -1,3 +1,8 @@
+"""
+Author: Samson Oloruntola
+Find reference to first node with same data.
+"""
+
 class Node:
     def __init__(self, data):
         self.data = data

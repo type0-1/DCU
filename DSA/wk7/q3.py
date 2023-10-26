@@ -1,3 +1,8 @@
+"""
+Author: Samson Oloruntola
+Question: Reverse the Linked-List recursively.
+"""
+
 class Node:
 
     def __init__(self, data):

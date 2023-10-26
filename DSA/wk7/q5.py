@@ -1,3 +1,8 @@
+"""
+Author: Samson Oloruntola
+Question: Remove N'th Node.
+"""
+
 class Node:
     def __init__(self, data):
         self.data = data
