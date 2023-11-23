@@ -8,7 +8,7 @@ node *assign_nodes(char*[], int*);
 void remove_initial_evens(node**);
 void remove_evens(node*);
 void add_odds(node*, int*);
-
+void push_node(node*, int*);
 
 struct Node{
     int val;
@@ -18,11 +18,7 @@ struct Node{
 
 int main(int argc, char *argv[]){
     int size = argc-1, total = 0;
-    node *head = assign_nodes(argv, &size), *tail = NULL;
-
-    for(node *curr = head; curr->next != NULL; curr = curr->next){
-        tail = curr;
-    }
+    node *head = assign_nodes(argv, &size);
 
     remove_initial_evens(&head);
 
@@ -32,13 +28,18 @@ int main(int argc, char *argv[]){
 
     add_odds(head, &total);
 
-    while(head->next){
+    push_node(curr, &total);
+    
+    while(head != NULL){
         printf("%d\n", head->val);
         head = head->next;
     }
+    
+    curr = head;
 
-    printf("%d\n", total);
-
+    free(head);
+    
+    curr = NULL;
     return 0;
 }
 
@@ -85,5 +86,21 @@ void add_odds(node *head, int *total){
         *total += curr->val;
         curr = curr->next;
     }
+
+}
+
+void push_node(node *curr, int *total){
+
+    while(curr->next->next != NULL){
+        curr = curr->next;
+    }
+
+    node *new_node = (node*)calloc(1, sizeof(node));
+
+    new_node->prev = curr;
+    new_node->val = *total;
+    new_node->next = NULL;
+
+    curr->next = new_node;
 
 }
