@@ -30,12 +30,12 @@ int main(int argc, char *argv[]){
 
     push_node(curr, &total);
     
-    while(head != NULL){
-        printf("%d\n", head->val);
-        head = head->next;
-    }
-    
     curr = head;
+
+    while(curr != NULL){
+        printf("%d\n", curr->val);
+        curr = curr->next;
+    }
 
     free(head);
     
@@ -62,7 +62,10 @@ node *assign_nodes(char *argv[], int *size){
 void remove_initial_evens(node **head){
     while((*head)->val % 2 == 0){
         (*head) = (*head)->next;
+        free((*head)->prev);
+        (*head)->prev = NULL;
     }
+    (*head)->prev = NULL;
 }
 
 void remove_evens(node *curr){
