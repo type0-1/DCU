@@ -6,7 +6,6 @@ typedef struct Node node;
 
 node *create_list(char*);
 void include_quote_sentence(int*, int*, char*);
-void shift_index(char*, int*);
 void get_shortest(node*, int*);
 void get_largest(node*, int*);
 void print_output(node*, int*);
@@ -102,7 +101,7 @@ void get_shortest(node *curr, int *shortest){
 
 void get_largest(node *curr, int *largest){
     *largest= strlen(curr->sentence);
-    
+
     while(curr->next){
         if(strlen(curr->sentence) > *largest){
             *largest = strlen(curr->sentence);
