@@ -1,0 +1,4 @@
+parents(bob, tim, mary).
+parents(jerry, tim, mary).
+
+siblings(X, Y) :- parents(X, A, B), parents(Y, A, B).
